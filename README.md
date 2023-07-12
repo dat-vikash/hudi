@@ -16,6 +16,16 @@
   limitations under the License.
 -->
 
+# Maestro ETL
+To enable Hive sync with Flink, need to build this jar with the following profile
+```
+mvn clean install -DskipTests -Drat.skip=true -Pflink-bundle-shade-hive3
+```
+
+Upload this jar to the Flink lib folder and remove hive deps like `hive-exec` & `hive-common` as they are already bundled with this jar.
+
+https://hudi.apache.org/docs/syncing_metastore/#flink-setup
+
 # Apache Hudi
 
 Apache Hudi (pronounced Hoodie) stands for `Hadoop Upserts Deletes and Incrementals`. Hudi manages the storage of large
