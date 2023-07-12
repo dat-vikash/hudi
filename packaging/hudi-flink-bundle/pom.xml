@@ -180,10 +180,16 @@
                   <pattern>org.apache.avro.</pattern>
                   <shadedPattern>${flink.bundle.shade.prefix}org.apache.avro.</shadedPattern>
                 </relocation>
+                <!-- Relocating parquet-avro and flink-parquet to avoid classpath issues with event-platform-core jar which is breaking backup jobs -->
                 <relocation>
                   <pattern>org.apache.parquet.</pattern>
                   <shadedPattern>${flink.bundle.shade.prefix}org.apache.parquet.</shadedPattern>
                 </relocation>
+                <relocation>
+                  <pattern>org.apache.flink.formats.parquet.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.flink.formats.parquet.</shadedPattern>
+                </relocation>
+            
                 <relocation>
                   <pattern>org.apache.commons.io.</pattern>
                   <shadedPattern>org.apache.hudi.org.apache.commons.io.</shadedPattern>
