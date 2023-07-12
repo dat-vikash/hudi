@@ -2365,6 +2365,7 @@
       <id>flink1.16</id>
       <properties>
         <orc.flink.version>1.5.6</orc.flink.version>
+        <flink.avro.version>1.11.1</flink.avro.version>
       </properties>
       <activation>
         <property>
