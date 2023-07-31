@@ -16,8 +16,8 @@
   limitations under the License.
 -->
 
-# Maestro ETL
-To enable Hive sync with Flink, need to build this jar with the following profile
+#
+To enable Hive sync with Flink on java 11, need to build this jar with the following profile
 ```
 mvn clean install -DskipTests -Drat.skip=true -Pflink-bundle-shade-hive3
 ```
